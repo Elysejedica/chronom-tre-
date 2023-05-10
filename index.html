@@ -5,76 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Chronomètre</title>
 </head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        margin-top: 200px;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: sans-serif;
-        background-image: linear-gradient(120deg, #d4d4d4 10%, #969 100%);
-    }
-
-    #hour {
-        padding: 100px;
-        border-radius: 30px;
-        background-color: rgb(252, 252, 252);
-    }
-
-    #chrono {
-        text-align: center;
-        font-size: 50px;
-        margin-bottom: 20px;
-    }
-
-    button {
-        font-size: 25px;
-        width: 150px;
-        padding: 10px;
-        border: none;
-        border-radius: 15px;
-        cursor: pointer;
-    }
-
-    .buttonDem {
-        background-color: rgb(32, 180, 32);
-        color: white;
-    }
-
-    .buttonArr{
-        background-color: red;
-        color: white;
-    }
-
-    .buttonRes{
-        background-color: blue;
-        color: white;
-    }
-
-</style>
-
-<body>
+<body class="dark">
     <div id="hour">
+        <div class="luminosite">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="50" fill="currentColor"  >
+                <path id="reglage" d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+              </svg>
+        </div>
         <div id="chrono"> 00:00:00:00</div>
         <div id="buttons">
             <button id="reset" class="buttonRes">Réinitialiser</button>
             <button id="stop" class="buttonArr">Arrêter</button>
             <button id="start" class="buttonDem">Démarrer</button>
         </div>
+
     </div>
 
-
-
-    <script src="index.js"></script>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/45e38e596f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

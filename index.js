@@ -81,6 +81,22 @@ const reset = () => {
     clearTimeout(timeout);   
 };
 
+
 startBtn.addEventListener("click", demarrer);
 stopBtn.addEventListener("click", arrêter);
 resetBtn.addEventListener("click", reset);
+
+const darkBtn = document.getElementById("reglage");
+let isDarkMode = false;
+
+darkBtn.onclick = function () {
+    let mode = document.querySelector('body');
+    if (isDarkMode) {
+        mode.classList.remove('dark');
+        isDarkMode = false;  
+    } else {
+        mode.classList.add( 'dark');
+        isDarkMode = true;
+    }
+    
+}
