@@ -89,6 +89,15 @@ resetBtn.addEventListener("click", reset);
 const darkBtn = document.getElementById("reglage");
 let isDarkMode = false;
 
+window.onload = function () {
+    let mode = document.querySelector('body');
+    if (isDarkMode) {
+        mode.classList.add('dark');
+    } else{
+        mode.classList.remove('dark');
+    }
+}
+
 darkBtn.onclick = function () {
     let mode = document.querySelector('body');
     if (isDarkMode) {
